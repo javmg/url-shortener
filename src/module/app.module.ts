@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { UrlModule } from './url.module';
 import { ApiModule } from './api.module';
 import { ConfigModule } from '@nestjs/config';
 
@@ -9,6 +10,7 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
       envFilePath: '.env',
     }),
+    UrlModule,
   ],
   controllers: [],
   providers: [],
